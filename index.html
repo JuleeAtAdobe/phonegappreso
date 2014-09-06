@@ -1,0 +1,325 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<!-- 20140905 -->
+		<title>PhoneGap for GDI Neo Hack</title>
+
+		<meta name="description" content="Summary presentation of what the Web Platform group does">
+		<meta name="author" content="Vincent Hardy">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/theme/default.css">
+		<link rel="stylesheet" href="css/presentation.css">
+
+        <script type="text/javascript" src="js/prefixfree.js" defer></script>
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- JQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+		<script>
+			// If the query includes 'print-pdf' we'll use the PDF print sheet
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+        <!-- Typekit -->
+        <script type="text/javascript" src="//use.typekit.net/nxa0zzm.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <style type="text/css" media="screen">
+            .tk {
+                font-family: "source-sans-pro",sans-serif;
+                font-style: normal;
+                font-weight: 200; 
+            }
+        </style>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	
+	<body>
+		
+		<div class="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <section data-state="abstract-1" class="inverted vignetted" id="screen_1">
+                    <h1><span class="subtitle">PhoneGap &amp; PhoneGap Build<br>Getting Started</span><span class="subtitle"><img src="assets/images/cordova-phonegap-build.jpg"></span></h1>
+
+                    <p>Julee Burdekin</p>
+                    <p>@adobejulee</p>
+                </section>
+
+                <section data-state="abstract-1" class="inverted vignetted" id="screen_2">
+                    <h2 class="inverted">What is PhoneGap?<br>
+                    <img src="assets/images/phonegap.png"></h2>
+                    <ul>
+                            <li>Free and open source framework</li>
+                            <li>Create mobile apps using the web technologies</li>
+                            <li>Use standardized web APIs</li>
+                            <li>Target the platforms you care about</li>
+
+                    </ul>
+                </section>
+
+                <section data-state="abstract-1" class="inverted vignetted" id="screen_3">
+                    <h2 class="inverted">What is PhoneGap Build?<br>
+                    <img src="assets/images/build.jpeg"></h2>
+                    <ul>
+                        <li>A cloud-based service</li>
+                        <li>Built on top of the PhoneGap framework</li>
+                        <li>Easily build your apps in the cloud</li>
+                        <li><a href="http://phonegap.com/app/feature/" target="_blank">http://phonegap.com/app/feature/</a> </li>
+                    </ul>
+                </section>
+
+                <section data-state="abstract-1" class="inverted vignetted" id="screen_4">
+                    <h2 class="inverted">Overview</h2>
+                    <p>&nbsp;</p>
+                    <ul>
+                            <li>You create screens with HTML, CSS &amp; JavaScript</li>
+                            <li>You use PhoneGap to make it an app</li>
+                            <li>You use PhoneGap API to add device features</li>
+                            <li>You use PhoneGap Build to build &amp; update it</li>
+                            <li>Your app displays in 100% of the screen</li>
+                            <li>It's like a headless browser</li>
+                    </ul>
+                </section>
+
+                <section data-state="abstract-1" class="inverted vignetted" id="screen_5">
+                    <h2 class="inverted">Overview</h2>
+                    <a href="http://www.tricedesigns.com/2012/03/22/phonegap-explained-visually/" target="_blank"><img src="assets/images/andys-web-view.png"></a>
+                </section>
+
+                <section data-state="abstract-1" class="inverted vignetted"  id="screen_6">
+                    <h2 class="inverted">Getting Started</h2>
+                    <p>&nbsp;</p>
+                    <ul style="list-style-type: none;">
+                            <li>1. Design with mobile in mind</li>
+                            <li>2. Download &amp; install PhoneGap &amp; the Cordova XPlat CLI</li>
+                            <li>3. Install device-specific apps &amp; SDKs</li>
+                            <li>4. Get any dev certs and/or app keys</li>
+                            <li>5. Add PhoneGap API</li>
+                            <li>6. Build the app</li>
+                            <li>7. Test in emulators &amp; devices you have</li>
+                    </ul>
+                </section>
+
+                <section data-state="abstract-1" class="inverted vignetted"  id="screen_7">
+                    <h2 class="inverted">1. Design with mobile in mind</h2>
+                    <p>&nbsp;</p>
+                    <ul>
+                            <li>Use templates &amp; guidelines</li>
+                            <li>Start with sizes that work on your smallest fav device</li>
+                            <li>Use media queries to increase sizes</li>
+                    </ul>
+                </section>
+                    
+                <section data-state="abstract-1" class="inverted vignetted"  id="screen_*">
+                    <h2 class="inverted">2. Download &amp; install PhoneGap &amp; the Cordova XPlat CLI</h2>
+                    <p>&nbsp;</p>
+                    <ul>
+                            <li><a href="http://phonegap.com/install/" target="_blank">http://phonegap.com/install/</a></li>
+                            <li><a href="http://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html#The%20Command-Line%20Interface" target="_blank">Install the Cordova cross-platform command-line interface</a></li>
+                            <li>Node.js is required</li>
+                    </ul>
+                </section>
+
+                <section data-state="abstract-1" class="inverted vignetted"  id="screen_8">
+                    <h2 class="inverted">3. Install device-specific apps &amp; SDKs</h2>
+                    <p>&nbsp;</p>
+                    <ul>
+                            <li><a href="http://docs.phonegap.com/en/3.5.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide" target="_blank">Install Android</a></li>
+                            <li><a href="http://docs.phonegap.com/en/3.5.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide" target="_blank">Install iOS</a></li>
+                            <li><a href="http://docs.phonegap.com/en/3.5.0/guide_platforms_index.md.html" target="_blank">Install others</a></li>
+                            <li>Pay attention to variations in instrux</li>
+                    </ul>
+                </section>
+
+                <section data-state="abstract-1" class="inverted vignetted"  id="screen_9">
+                    <h2 class="inverted">For example: Android</h2>
+                    <p>&nbsp;</p>
+                    <ul>
+                            <li>Instrux differ from <a href="http://developer.android.com/sdk/index.html" target="_blank">Android</a></li>
+                            <li>(But it's a bit easier)</li>
+                            <li>Eclipse is an IDE -- you can use your own</li>
+                            <li><a href="http://developer.android.com/sdk/installing/index.html?pkg=adt" target="_blank">Install Eclipse &amp; Adroid Dev Tools (ADT)</a></li>
+                            <li><a href="http://developer.android.com/sdk/installing/adding-packages.html"  target="_blank">Install packages for devices you want to target</a></li>
+                </section>
+
+                <section data-state="abstract-1" class="inverted vignetted"  id="screen_10">
+                    <h2 class="inverted">Example, continued</h2>
+                            <p><a href="http://developer.android.com/sdk/installing/adding-packages.html"  target="_blank">Install plugins for APIs you want to use</a><br>
+                                for example:<br>
+                        
+                        </p>
+
+    <pre>
+        cordova platform add ios
+        cordova platform add android
+        
+        cordova plugin add org.apache.cordova.device
+        cordova plugin add org.apache.cordova.console
+        cordova plugin add org.apache.cordova.camera
+        
+    </pre>
+                    <p>And emulators</p>
+    <pre>
+        sudo npm install -g ios-sim
+
+        cordova emulate ios
+
+    </pre>
+                </section>
+
+                <section data-state="abstract-1" class="inverted vignetted"  id="screen_11">
+                    <h3 class="inverted">4. Get any dev certs and/or app keys<br>
+                    For example, Apple Dev Cert &amp; Provisioning</h3>
+                    <p>&nbsp;</p>
+                    <ul>
+                            <li><a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html" target="_blank">Scan docs on App Distribution</a></li>
+                            <li>Pay Apple $99 for the iOS Dev Program</li>
+                    </ul>
+                </section>
+
+                <section data-state="abstract-1" class="inverted vignetted"  id="screen_12">
+                    <h3 class="inverted">For example, Apple Cert & Provisioning Cont'd</h3>
+                    <p>&nbsp;</p>
+                    <ul>
+                            <li><a href="https://developer.apple.com/account/ios/certificate/certificateCreate.action" target="_blank">Get your dev certificate</a>
+                            <ul>
+                                <li>Use Keychain Access to generate a key pair locally</li>
+                                <li>Download &amp; double-click to store in Keychain Access.</li>
+                                <li>Save both *.cer file &amp; CertificateSigningRequest.certSigningRequest somewhere secure.</li>
+                                <li>Go to Keypair Access, select the private key associated with the Cert & export as a *.p12 file, with a password.</li>
+                            </ul>
+                            </li>
+                    </ul>
+                </section>
+
+                <section data-state="abstract-1" class="inverted vignetted"  id="screen_13">
+                    <h3 class="inverted">For example, Apple Cert & Provisioning Cont'd</h3>
+                    <p>&nbsp;</p>
+                    <ul>
+                            <li><a href="https://developer.apple.com/account/ios/profile/profileCreate.action?formID=88016974" target="_blank">Get provisioned</a> </li>
+                            <li>Download and double click the following file to install your Provisioning Profile,</li>
+                            <li>It's in User/Library/MobileDevice/Provisioning Profiles</li>
+                            <li><a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ManagingAccounts/ManagingAccounts.html" target="_blank">Adding your Apple ID to Xcode</a></li>
+                            <li><a href="https://developer.apple.com/account/ios/identifiers/bundle/bundleCreate.action?formID=90729212" target="_blank">Get your Bundle ID</a></li>
+                        
+                    </ul>
+                </section>
+                    
+                <section data-state="abstract-1" class="inverted vignetted"  id="screen_14">
+                    <h2 class="inverted">5. Add PhoneGap API</h2>
+                    <p>&nbsp;</p>
+                    <ul>
+                            <li>Create an app with Cordova CLI</li>
+                            <li>Fold in your code</li>
+                            <li>Test for styles</li>
+                    </ul>
+                </section>
+                <section data-state="abstract-1" class="inverted vignetted"  id="screen_15">
+                    <h2 class="inverted">6. Build</h2>
+                    <p>&nbsp;</p>
+                    <ul>
+                            <li>Before you build <a href="http://www.raymondcamden.com/2014/7/15/Yet-another-CordovaPhoneGap-Debugging-Tip" target="_blank">(props to Steve &amp; Ray):</a></li>
+                    </ul>
+                    
+    <pre>
+        window.onerror = function(msg,url,line){
+            console.log('window.onerror :',msg,url,line);
+        }
+    </pre>
+                    
+                </section>
+                    
+                <section data-state="abstract-1" class="inverted vignetted"  id="screen_16">
+                    <h2 class="inverted">7. Test</h2>
+                    <p>&nbsp;</p>
+                    <ul>
+                            <li>In emulators</li>
+                            <li>On real devices</li>
+                    </ul>
+                </section>
+
+                </section>
+                <section data-state="abstract-1" class="inverted vignetted"  id="screen_*">
+                    <h2 class="inverted">Some help</h2>
+                    <p>&nbsp;</p>
+                    <ul>
+                            <li><a href="docs.phonegap.com" target="_blank">docs.phonegap.com</a></li>
+                            <li><a href="http://www.tricedesigns.com/2012/03/22/phonegap-explained-visually/" target="_blank">Andy Trice's (slightly old) Visual Overview</a></li>
+                            <li><a href="http://ccoenraets.github.io/cordova-tutorial/" target="_blank">Christophe Coenraets's tutorial with lots of examples</a></li>
+                            <li><a href="http://www.gajotres.net/using-google-maps-javascript-api-v3-with-jquery-mobile/" target="_blank">Dragan Gaić's Google Maps &amp; jQuery</a></li>
+                    </ul>
+                </section>
+                    
+                
+                
+                
+                <section data-state="abstract-1" class="inverted vignetted">
+                    <h2 class="inverted">Get social with us:</h2>
+
+                    <ul>
+
+                        <li><a href="http://twitter.com/phonegap">@phonegap</a></li>
+                        <li><a href="http://twitter.com/phonegapbuild">@phonegapbuild</a></li>
+                        <li><a href="http://twitter.com/adobeweb">@adobeweb</a></li>
+                        <li><a href="http://twitter.com/adobejulee">@adobejulee</a></li>
+                    </ul>
+                </section>
+            </div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Presentation progress bar -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+				]
+			});
+			
+		</script>
+	</body>
+</html>
